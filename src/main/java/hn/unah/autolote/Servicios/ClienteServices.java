@@ -6,7 +6,7 @@ import hn.unah.autolote.Modelos.Cliente;
 
 public interface ClienteServices {
     
-    public Cliente crearCliente();
+    public Cliente crearCliente(Cliente cliente);
     
     public List<Cliente> obtenerTodosClientes();
 

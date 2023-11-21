@@ -27,11 +27,11 @@ public class Reserva {
     @Column(name = "idreserva")
     private int idReserva;
 
-    @JoinColumn(name = "idcliente", referencedColumnName = "idcliente")
-    private Cliente idCliente;
+    @Column(name = "idcliente")
+    private int idCliente;
 
-    @JoinColumn(name = "idvehiculo", referencedColumnName = "idvehiculo")
-    private Vehiculo idVehiculo;
+    @Column(name = "idvehiculo")
+    private int idVehiculo;
 
     private Date fecha;
 

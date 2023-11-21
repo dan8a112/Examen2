@@ -37,6 +37,6 @@ public class Cliente {
 
     @ManyToOne
     @JoinColumn(name = "idtipocliente", referencedColumnName = "idtipocliente")
-    private TipoCliente idTipoCliente;
+    private TipoCliente tipoCliente;
 
 }
