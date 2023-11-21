@@ -1,5 +1,6 @@
 package hn.unah.autolote.Modelos;
 
+
 import java.util.Date;
 
 import jakarta.persistence.Column;
