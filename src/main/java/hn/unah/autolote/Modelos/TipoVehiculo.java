@@ -2,6 +2,9 @@ package hn.unah.autolote.Modelos;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -32,7 +35,8 @@ public class TipoVehiculo {
     @Column(name = "precioxhora")
     private double precioXHora;
 
-    @OneToMany(mappedBy = "idTipoVehiculo")
+    @OneToMany(mappedBy = "tipoVehiculo", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Vehiculo> vehiculos;
 
 }

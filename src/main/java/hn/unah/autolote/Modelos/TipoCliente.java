@@ -2,6 +2,8 @@ package hn.unah.autolote.Modelos;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -31,5 +33,6 @@ public class TipoCliente {
     private String descripcion;
 
     @OneToMany(mappedBy = "tipoCliente", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Cliente> clientes;
 }
