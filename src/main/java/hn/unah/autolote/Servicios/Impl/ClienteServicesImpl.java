@@ -3,11 +3,13 @@ package hn.unah.autolote.Servicios.Impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import hn.unah.autolote.Modelos.Cliente;
 import hn.unah.autolote.Repositorios.ClienteRepository;
 import hn.unah.autolote.Servicios.ClienteServices;
 
+@Service
 public class ClienteServicesImpl implements ClienteServices{
 
     @Autowired
@@ -20,14 +22,17 @@ public class ClienteServicesImpl implements ClienteServices{
 
     @Override
     public List<Cliente> obtenerTodosClientes() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'obtenerTodosClientes'");
+        return clienteRepository.findAll();
     }
 
     @Override
     public Cliente obtenerClienteId(int idCliente) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'obtenerClienteId'");
+        Cliente cliente = clienteRepository.findById(idCliente).get();
+
+        if(cliente!=null){
+            return cliente;
+        }
+        return null;
     }
     
 }

@@ -33,6 +33,6 @@ public class TipoVehiculo {
     private double precioXHora;
 
     @OneToMany(mappedBy = "idTipoVehiculo")
-    private List<Vehiculo> clientes;
+    private List<Vehiculo> vehiculos;
 
 }
